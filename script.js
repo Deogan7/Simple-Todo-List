@@ -8,21 +8,22 @@ document.getElementById('new-task-form').addEventListener('submit', function(e) 
         const listItem = document.createElement('li');
         listItem.textContent = newTask;
 
-        // Create Complete button
+        // Allows me to create the complete button when user is done the task they hope to achieve
         const completeButton = document.createElement('button');
         completeButton.textContent = 'Complete';
         completeButton.className = 'complete-btn';
 
-        // Create checkbox
+        // This is where we create the checkbox, so if the user needs to check and uncheck the box after co pletion, it is possible
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.className = 'task-checkbox';
-        checkbox.style.display = 'none'; // Initially hide the checkbox
+        checkbox.style.display = 'none'; 
 
-        // Event listener for Complete button
+       
         completeButton.addEventListener('click', function() {
-            checkbox.style.display = 'block'; // Show checkbox
-            completeButton.style.display = 'none'; // Hide Complete button
+        // We can display the checkbox here 
+            checkbox.style.display = 'block'; 
+            completeButton.style.display = 'none'; 
         });
 
         listItem.appendChild(completeButton);
